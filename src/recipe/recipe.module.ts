@@ -4,9 +4,10 @@ import { RecipeController } from './recipe.controller';
 import { RecipeService } from './recipe.service';
 import { Recipe } from 'src/entities/Recipe';
 import { IngredientRecipeUsage } from 'src/entities/IngredientRecipeUsage';
+import { Ingredient } from 'src/entities/Ingredient';
 
 @Module({
-  imports: [MikroOrmModule.forFeature({ entities: [Recipe, IngredientRecipeUsage] })],
+  imports: [MikroOrmModule.forFeature({ entities: [Recipe, IngredientRecipeUsage, Ingredient] })],
   controllers: [RecipeController],
   providers: [RecipeService]
 })
